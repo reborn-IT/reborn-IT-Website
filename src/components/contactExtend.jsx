@@ -2,53 +2,71 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import Modal from './Modal';
 import $ from 'jquery';
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
+// import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 export const ContactExtend = (props) =>{
 
-    const [modalOpen, setModalOpen] = useState(false);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [message, setMessage] = useState('');
+     const [modalOpen, setModalOpen] = useState(false);
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [phone, setPhone] = useState('');
+    // const [message, setMessage] = useState('');
    /*message, setMessgae*/ 
 
-    function sendEmail(e){
-        e.preventDefault();
-        axios.post(`https://rebornit.herokuapp.com/API/rebornit/contactus`, { 
-            name:name,
-            email:email,
-            phone:phone,
-            message : message
-        })
-        .then(res => {
-            console.log(res);
-            console.log(res.data);
-            if(res.data.status==200){
-                popup();
-            }else if(res.data.status==400){
-                Errorpopup();
-            }
+    // function sendEmail(e){
+    //     e.preventDefault();
+    //     axios.post(`https://rebornit.herokuapp.com/API/rebornit/contactus`, { 
+    //         name:name,
+    //         email:email,
+    //         phone:phone,
+    //         message : message
+    //     })
+    //     .then(res => {
+    //         console.log(res);
+    //         console.log(res.data);
+    //         if(res.data.status==200){
+    //             popup();
+    //         }else if(res.data.status != 200){
+    //             Errorpopup();
+    //         }
             
             
             
             
-            // setModalOpen(true);
-            // {alert("RebornIT will contact you very soon !!! ")}
+    //         // setModalOpen(true);
+    //         // {alert("RebornIT will contact you very soon !!! ")}
             
-            // if(res.data=== true)
+    //         // if(res.data=== true)
             
-            //     setModalOpen(true);
+    //         //     setModalOpen(true);
             
                 
-            // else{
-            //     alert('Error occured... !')
-            //     window.location.reload(true);
-            // }
-        })
-    }
+    //         // else{
+    //         //     alert('Error occured... !')
+    //         //     window.location.reload(true);
+    //         // }
+    //     })
+    // }
 
-   
+   function sendEmail(e){
+    e.preventDefault();
+
+    emailjs.sendForm('service_o3asf1m', 'template_gafn5ti', e.target, 'user_vFSuRYBMYL78BIN6engQN')
+      .then((result) => {
+          console.log(result.text);
+          if(result.text=="OK"){
+                {document.getElementById('popup_box').style.display="block"}
+          }else{
+            {document.getElementById('popup_box_error').style.display="block"}
+          }
+      }, (error) => {
+          console.log(error.text);
+         
+      });
+      e.target.reset();
+   }
+
 
     function popup(){
             $(document).ready(
@@ -64,22 +82,8 @@ export const ContactExtend = (props) =>{
                });
             }
 
-            function Errorpopup(){
-                $(document).ready(
-                    function(){
-                      $('#contactbtn').click(
-                     function(){
-                       $('.popup_box_error').css("display", "block");
-                     });
-                    
-                   });
-                }
-              
-                function closepopup(){
-                    $('.btnError').click(function(){
-                        $('.popup_box_error').css("display", "none");
-                      });
-                }
+          
+                
 
         return(
         <div>
@@ -99,22 +103,19 @@ export const ContactExtend = (props) =>{
                     <p>Fill up our Form bellow or <span class="formDivSpan">send us an email </span></p>
                 </div>
             <div>
-            <form action="" method="" class="form shadow-sm" id="formId">
+            <form onSubmit={sendEmail} class="form shadow-sm" id="formId">
                
-                <div> <input type="text" name="name" placeholder="Your Name" onChange={event => setName(event.target.value)} required/></div>
-                <div> <input type="tel" name="tele" placeholder="Phone Number" onChange={event => setPhone(event.target.value)} required/></div>
-                <div><input type="email" name="email" placeholder="Email Address" onChange={event => setEmail(event.target.value)} required/></div>
-                <div><textarea name="message" placeholder="Description" onChange={event => setMessage(event.target.value)} required/> </div>
-                 <div class="btnDiv"><input type='submit' className='btn btn-primary btn-lg' id="contactbtn" onClick= {sendEmail}/> 
-                {/* <div class="btnDiv"><input type='submit' className='btn btn-primary btn-lg' id="contactbtn"  onClick={() => {
-                    setModalOpen(true);
-                    sendEmail();
-                    }}/> */}
+                <div> <input type="text" name="from_name" placeholder="Your Name" required/></div>
+                <div> <input type="tel" name="contact" placeholder="Phone Number" required/></div>
+                <div><input type="email" name="from_mail" placeholder="Email Address"  required/></div>
+                <div><textarea name="message" placeholder="Description"  required/> </div>
+                 <div class="btnDiv"><input type='submit' className='btn btn-primary btn-lg' id="contactbtn" value="send" /> 
+               
 
                
-                    <div class="popup_box">
+                    <div class="popup_box" id='popup_box'>
                     <div class="btns">
-                            <a href="#contactExtend" class="btn1" onClick={()=>{ window.location.reload(false);}}>X</a>
+                            <a href="#contactExtend" class="btn1" onClick={()=>{ document.getElementById('popup_box').style.display="none"}}>X</a>
                             </div>
                         <h3>RebornIT will contact you soon!</h3>
                         {/* <i class="fa fa-exclamation-circle" aria-hidden="true"></i> */}
@@ -123,11 +124,11 @@ export const ContactExtend = (props) =>{
                      </div>
 
 
-                     <div class="popup_box_error">
+                     <div class="popup_box_error" id='popup_box_error'>
                    
                         <h3>Something went wrong!</h3>
                          <div class="btns-error">
-                            <a href="#contactExtend" class="btnError" onClick={closepopup}>OK</a>
+                            <a href="#contactExtend" class="btnError" onClick={()=>{document.getElementById('popup_box_error').style.display="none"}}>OK</a>
                          </div>
                             
                      </div>
@@ -189,9 +190,9 @@ Mobile application development and UI design.</span></span>
                <div class="footer-col textDownShift">
   	 			<h4>follow us</h4>
   	 			<div class="social-links">
-  	 				<a href="https://www.facebook.com/rebornIT-111464454651943"><img src="https://img.icons8.com/fluency/48/000000/facebook-circled.png"/></a>
-  	 				<a href="https://www.instagram.com/rebornit/"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/></a>
-  	 				<a href="#"><img src="https://img.icons8.com/fluency/48/000000/linkedin-circled.png"/></a>
+  	 				<a href="https://www.facebook.com/rebornIT-111464454651943"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://www.instagram.com/rebornit/"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
   	 			</div>
   	 		</div>
 

@@ -315,8 +315,8 @@ a:focus,
   
 }
 .intro {
-  display: table;
-  width:108%;
+  display:block;
+  width:100%;
   padding: 0;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
@@ -793,6 +793,7 @@ float: left;
   padding: 80px 0 40px;
   background: linear-gradient(to right, #6415ff 0%, #745cfb 100%);
   color: rgba(255, 255, 255, 0.75);
+  padding-top: 50%;
 }
 #contact .section-title {
   margin-bottom: 40px;
@@ -1107,13 +1108,13 @@ footer{
   border: 1px solid #0059b3;
 }
 .popup_box{
-  width: 400px;
+  width: 90%;
   background: white;
   text-align: center;
   align-items: center;
   padding: 40px;
   border: 3px solid #6415ff;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 10px rgba(0,0,0,3);
   z-index: 9999;
   display: none;
 }
@@ -1126,7 +1127,7 @@ footer{
   margin: -10px 0 20px 0;
 }
 .popup_box h3{
-  font-size: 30px;
+  font-size: 250%;
   color: black;
   margin-bottom: 5px;
 }
@@ -1281,12 +1282,39 @@ footer{
    padding: 0 15px;
 }
 
-#footerSpanText{
+/* #footerSpanText{
 text-align:left;
 padding: none !important;
+transition: 1s;
+} */
 
-
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
 }
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+/* #footerSpanText:hover{
+ transform: scale(1.8);
+background-color: #000000;
+box-shadow: 2px 2px 2px #6415ff;
+
+
+  } */
 
 .footerSpanTextDiv{
   
@@ -1298,6 +1326,11 @@ padding: none !important;
   border-right: none;
   border-bottom: none;
   padding: 4%;
+  transition: 1s;
+}
+
+.footerSpanTextDiv:hover{
+  text-align: 8px;
 }
 .footer-col h4{
 	font-size: 18px;
@@ -1335,7 +1368,13 @@ padding: none !important;
 	color: #ffffff;
 	padding-left: 8px;
 }
-/* .footer-col .social-links a{
+
+.footer-col .social-links a i{
+   margin-top: 27%;
+}
+
+
+.footer-col .social-links a{
 	display: inline-block;
 	height: 40px;
 	width: 40px;
@@ -1346,17 +1385,20 @@ padding: none !important;
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.5s ease;
-} */
-.footer-col .social-links a:hover{
-
 }
+
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+
 
 #mailFooter{
   text-transform: none;
 }
 
 .footerCenterText{
-  
   font-weight: 600;
   color: #bbbbbb;
   padding: 0 8% 0 0;
