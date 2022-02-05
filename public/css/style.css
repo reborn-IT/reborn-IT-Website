@@ -1,6 +1,7 @@
 
 
 /** text of the whole body*/
+
 body,
 html {
   font-family: "Open Sans", sans-serif;
@@ -230,7 +231,7 @@ hr {
 }
 .navbar-toggle {
   border-radius: 0;
-  margin-right: 15%;
+  margin-right: 5%;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -316,7 +317,7 @@ a:focus,
 }
 .intro {
   display:block;
-  width:100%;
+  /* width:100%; */
   padding: 0;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
@@ -349,7 +350,7 @@ a:focus,
   margin-bottom: 40px;
 }
 #header .intro-text {
-  padding-top: 20%;
+  padding-top: 25%;
   padding-bottom: 12%;
   
 }
@@ -381,7 +382,7 @@ a:focus,
 }
 
 .img-responsive{
-  margin-left: 3%;
+  margin-left: 2%;
   vertical-align: middle !important;
   background-color: transparent;
  
@@ -1058,7 +1059,7 @@ footer{
 }
 
 .Hello p{
-  font-size: 120%;
+  font-size: 110%;
 }
 
 .Hello p span{

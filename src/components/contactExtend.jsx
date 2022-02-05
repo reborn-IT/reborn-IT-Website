@@ -159,7 +159,7 @@ export const ContactExtend = (props) =>{
 
                     
        <footer className='footer'>
-           <div className='container-footer'>
+           <div className=''>
                <div className='rowFooter'>
                <div class="footer-col footerCenterText">
   	 			<img src="img/LOGO.png" alt="image" width="100%" height="100px"/>

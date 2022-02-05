@@ -8,7 +8,7 @@ export const Services = (props) => {
           {/* <div className="blueText">fast-turnaround, high-end</div> */}</h2>
           
         </div>
-        <div className='row'>
+        <div className=''>
         <div className='col-md-3'>
         </div>
                 <div className='col-md-6 accordion' id="accordionExample">

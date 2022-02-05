@@ -19,7 +19,7 @@ export const Header = (props) => {
                                 <h4>{props.data ? props.data.paragraph1 : 'Loading'}</h4>
                                 <h4>{props.data ? props.data.paragraph2 : 'Loading'}</h4>
                                 <a
-                                  href='#contactExtend'
+                                  href='#ContactExtend'
                                   className='btn btn-custom btn-lg page-scroll'
                                 >
                                 Start a Project
@@ -48,7 +48,7 @@ export const Header = (props) => {
             </div>
           </div>
 
-          <div className="row contactDetailsDiv">
+          {/* <div className="row contactDetailsDiv"> */}
                {/* <div className="col-sm-5 contactDiv">
                 <p id="contactNumberLanding">077 4 141 768</p>
               </div> */}
@@ -81,7 +81,7 @@ export const Header = (props) => {
               </div>
         </div>
      </footer> */}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </header>
