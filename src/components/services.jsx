@@ -11,6 +11,21 @@ export const Services = (props) => {
         <div className=''>
         <div className='col-md-3'>
         </div>
+
+
+        
+
+
+
+                            {/* new Accordian */}
+
+                            
+
+                            {/* new Accordian */}
+
+
+
+
                 <div className='col-md-6 accordion' id="accordionExample">
                  
                  <div class="accordion-item">
@@ -76,12 +91,6 @@ export const Services = (props) => {
 
 
 
-                       {/* <div>
-                            <button type='submit' className='' id="expolreBtn">
-                            EXPLORE YOUR IDEAS  <img src="img/moveright.png"></img> 
-                            </button>
-                         </div> */}
-                  
                 </div>
 
                 <div className='col-md-3'>

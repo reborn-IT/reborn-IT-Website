@@ -184,12 +184,12 @@
   "Features": [
     {
       "icon": "fa fa-cogs",
-      "title": "Flexible service",
+      "title": "Flexible Service",
       "text": "With our agile methodology, we have the capacity to respond to changes or make modifications that appropriately support our clients’ value generation"
     },
     {
       "icon": "fa fa-bullseye",
-      "title": "Fulfilling the client’s expectations",
+      "title": "Customer Satisfaction",
       "text": "We are dedicated to delivering on the promises we make to customers. Our most valuable asset is customers. Client happiness is the foundation of our satisfaction"
     },
     {
@@ -199,7 +199,7 @@
     },
     {
       "icon": "fa fa-money",
-      "title": "Cost effective",
+      "title": "Cost Effective",
       "text": "When compared to other software companies, we offer the most cost-effective Software products and services. We always make sure that the products we supply are worth the money our customers paid for them."
     }
   ]

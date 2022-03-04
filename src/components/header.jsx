@@ -11,7 +11,7 @@ export const Header = (props) => {
               {/* <div class="container"> */}
                     {/* <div class="row"> */}
                         {/* <div class="col-sm-5"> */}
-                           <div className="col-sm-7 div1">
+                           <div className="col-sm-5 div1">
                               <h1>
                                 {props.data ? props.data.title : 'Loading'}
                               </h1>
@@ -26,10 +26,10 @@ export const Header = (props) => {
                                 </a>{' '}
             
                         </div>
-                              <div class="col-sm-5 div2">         
+                              <div class="col-sm-7 div2">         
                                 {/* <div className="div2"> */}
                                   <div id="pheonixLogo">
-                                    <img id="pheonixImage" src="img/pheonix.png"></img>
+                                    <img id="pheonixImage" src="img/Logo Bird.png"></img>
                                   </div>
                                {/* </div> */}
                               </div>

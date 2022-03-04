@@ -70,7 +70,8 @@ h4 {
 .div2{
   float: right;
   /* width: 55%; */
-  text-align: center;
+  text-align: right;
+  margin-top: 5%;
 }
 /*pheonix logo*/
 .div1{
@@ -79,7 +80,7 @@ h4 {
 }
 
 #pheonixImage{
-  width: 100%;
+  width: 68%;
   
 }
 
@@ -319,23 +320,23 @@ a:focus,
   display:block;
   /* width:100%; */
   padding: 0;
-  background-color: #e5e5e5;
-  -webkit-background-size: cover;
+  background-color: black;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
 }
 .intro{
-  background: rgba(0, 0, 0, 0.2); 
+  background: rgba(0, 0, 0, 0.15); 
 }
 .intro h1 {
   font-family: "Raleway", sans-serif;
   color: #fff;
-  font-size: 30px;
+  font-size: 160%;
   font-weight: 700;
   
   margin-top: 0;
-  margin-bottom: 4%;
+  margin-bottom: 7%;
 }
 .intro h1 span {
   font-weight: 800;
@@ -347,13 +348,17 @@ a:focus,
   font-weight: 700;
   line-height: 30%;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 12%;
 }
 #header .intro-text {
-  padding-top: 25%;
+  padding-top: 15%;
   padding-bottom: 12%;
   
 }
+#header div1 a{
+
+}
+
 /* Features Section */
 #featureParaId{
   align-content: justify;
@@ -389,15 +394,17 @@ a:focus,
 }
 
 #about {
-  padding: 4% 0;
+  padding: 3%;
   background-color: #6415ff;
 }
 #about h4 {
   font-size: 200%;
-  margin: 0 0 30px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 0 0 5%;
+  margin-top: 2%;
+  margin-left: 5.5%;
+  margin-right: 5%;
   color: white;
+  text-align: justify;
 }
 #about h3 {
   position: relative;
@@ -430,10 +437,12 @@ a:focus,
 }
 #about img {
   width: 520px;
-  margin-top: 10px;
-  background: transparent;
+  margin-top: 1%;
+  background: none;
   border-right: 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+  float: left;
+  text-align: center;
+  /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.06); */
 }
 #about p {
   line-height: 24px;
@@ -485,14 +494,25 @@ a:focus,
  
 }
 
+#accordionExample{
+  /* background-color: #088dc2; */
+}
+
 #services .serviceContent{
-  border: 2px solid black;
-  border-left:none ;
+  /* border: 2px solid black; */
+ outline: none !important;
   border-right: none;
   text-align: center;
   padding: 5px;
   text-align: left;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 200% !important;
+}
+
+#services [type="button"]{
+  outline: none !important;
+  background: transparent !important;
+  border: none !important;
 }
 
 #services .serviceContent1{
@@ -986,7 +1006,7 @@ label {
 .formDiv{
  float: left;  
  margin-top: 25px;
- margin-left: 10%;
+ margin-left: 1%;
  
 }
 
@@ -1035,14 +1055,32 @@ label {
 .Conatctleft{
   
   display: inline;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
   /* text-align: right; */
 
 }
 #formId{
+  margin-top: 10%;
  padding: 0px;
 }
 
+#formId [type="text"],[type="email"],[type="tel"],textarea{
+   background: transparent;
+   border: none;
+   border-bottom: 2px solid #2981bc;
+   outline: none;
+   padding-left: 4%;
+   color: black;
+ }
+
+ #formId [type="submit"]{
+   width: 150px;
+   color:  linear-gradient(to right, #6415ff 0%, #5ca9fb 100%) !important;
+ }
+ 
+#formId .btnDiv{
+  text-align: center;
+}
 footer{
   margin-top: 10px;
 }
@@ -1055,7 +1093,7 @@ footer{
 }
 
 .Hello{
-  text-align: right;
+  text-align: center;
 }
 
 .Hello p{
@@ -1254,15 +1292,15 @@ footer{
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
-	/* margin:0;
+	margin:0;
 	padding:0;
-	box-sizing: border-box; */
+	/* box-sizing: border-box; */
 }
 .container-footer{
 	/* max-width: 1170px;*/
 	margin:auto; 
     line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Open Sans", sans-serif;
   /* background-color: #6415ff; */
   width: 105.5%;
 }
@@ -1283,11 +1321,12 @@ footer{
    padding: 0 15px;
 }
 
-/* #footerSpanText{
-text-align:left;
-padding: none !important;
-transition: 1s;
-} */
+ #footerSpanText{
+ font-weight: none !important;
+  color: white;
+  line-height: 1.5em;
+  font-size: 80%;
+} 
 
 .footer-col h4{
 	font-size: 18px;
@@ -1371,7 +1410,7 @@ box-shadow: 2px 2px 2px #6415ff;
 }
 
 .footer-col .social-links a i{
-   margin-top: 27%;
+   margin-top: 30%;
 }
 
 
@@ -1389,7 +1428,7 @@ box-shadow: 2px 2px 2px #6415ff;
 }
 
 .footer-col .social-links a:hover{
-	color: #24262b;
+	color: #6415ff;
 	background-color: #ffffff;
 }
 
@@ -1421,6 +1460,18 @@ box-shadow: 2px 2px 2px #6415ff;
 @media(max-width: 574px){
   .footer-col{
     width: 100%;
+}
+
+.Conatctleft img{
+  display: none;
+}
+
+#about h4{
+  text-align: center;
+}
+
+#header .intro-text {
+  padding-top: 30%;
 }
 }
 
