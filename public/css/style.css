@@ -1396,7 +1396,7 @@ box-shadow: 2px 2px 2px #6415ff;
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
-	color: #ffffff;
+	color: black;
 	text-decoration: none;
 	font-weight: 300;
 	color: #bbbbbb;
@@ -1473,6 +1473,10 @@ box-shadow: 2px 2px 2px #6415ff;
 #header .intro-text {
   padding-top: 30%;
 }
+}
+
+#navBarFooter li a{
+  color: white !important;
 }
 
 
